@@ -14,6 +14,21 @@ export const _todos = [
     title: "Pay bills",
     completed: false,
   },
+  {
+    id: 4,
+    title: "Call the doctor",
+    completed: false,
+  },
+  {
+    id: 5,
+    title: "Read a book",
+    completed: true,
+  },
+  {
+    id: 6,
+    title: "Watch a movie",
+    completed: false,
+  },
 ];
 
 export type Todo = (typeof _todos)[0];
