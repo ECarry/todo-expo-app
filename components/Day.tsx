@@ -1,6 +1,6 @@
 import { localFormatter, weekDayFormatter, weekDays } from "@/constants/week";
 import dayjs from "dayjs";
-import { View, Text, useWindowDimensions } from "react-native";
+import { Text, useWindowDimensions } from "react-native";
 import Todos from "./Todos";
 import { Accordion } from "@animatereactnative/accordion";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -11,6 +11,7 @@ const Day = ({ day }: { day: string }) => {
 
   return (
     <Accordion.Accordion
+      isOpen={dayjs(day).isSame(dayjs(), "day")}
       className="gap-2 pr-4 pt-4 pl-12 border-t-2 border-black/10"
       style={{
         minHeight: (height - top - bottom) / weekDays.length,
